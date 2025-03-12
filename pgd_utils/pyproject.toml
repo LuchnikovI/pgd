@@ -1,0 +1,22 @@
+[build-system]
+requires = ["maturin>=1,<2"]
+build-backend = "maturin"
+
+[project]
+name = "pgd_utils"
+requires-python = ">=3.7"
+version = "0.1.0"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+authors = [
+  { name = "Ilia Luchnikov", email = "ilia.luchnikov@tii.ae" }
+]
+dependencies = ["numpy", "scipy", "networkx"]
+
+[tool.maturin]
+profile = "release"
+rustc-args = ["-C", "target-cpu=native"]
