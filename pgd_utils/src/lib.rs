@@ -1,8 +1,8 @@
 use pauli_string::PauliString;
 use pyo3::{Bound, PyResult, pymodule, types::PyModule, types::PyModuleMethods, wrap_pyfunction};
 
-mod psdecomposer;
 mod pauli_string;
+mod psdecomposer;
 
 use psdecomposer::{PSDecomposer, parse_gset};
 
